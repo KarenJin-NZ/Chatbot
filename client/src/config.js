@@ -1,6 +1,8 @@
 import { createChatBotMessage } from "react-chatbot-kit";
 import LinkList from "./components/LinkList/LinkList";
 import Options from "./components/Options/Options";
+import Shipping from "./components/Shipping/Shipping";
+import MyAvatar from "./components/MyAvatar";
 
 const config = {
   botName:"Stella",
@@ -15,26 +17,14 @@ const config = {
       widgetName:"Options",
       widgetFunc: (props) => <Options {...props} />,
     },
+
+    //Shipping widget first layer
     {
-      widgetName:"shippingLinks",
-      widgetFunc: (props) => <LinkList {...props} />,
-      props: {
-        options: [
-          {
-            text:"Shipping rates",
-            url:
-            "https://www.healthpost.co.nz/help-support/delivery/",
-            id: 1,
-          },
-          {
-            text:"Shipping zones",
-            url:
-            "https://info.healthpost.co.nz/delivery-worldwide/international-delivery-options",
-            id: 2,
-          }
-        ]
-      }
+      widgetName:"shippingOptions",
+      widgetFunc: (props) => <Shipping {...props} />,
     },
+
+    //Specials widget
     {
       widgetName:"specialsLinks",
       widgetFunc: (props) => <LinkList {...props} />,
@@ -72,8 +62,10 @@ const config = {
           }
         ]
       }
-    }
-  ],
+    },
+
+
+  
 
   customStyles: {
     botMessageBox: {
@@ -85,7 +77,11 @@ const config = {
   },
 
   customComponents: {
-    header:() => <div style={{backgroundColor:"#2FA4FF", padding:"5px",borderRadius:"3px", fontSize:"15px", display:"flex", justifyContent:"left"}}>Hi there!👋I'm Stella the Bot.</div>
+    header:() => <div style={{backgroundColor:"#2FA4FF", padding:"5px",borderRadius:"3px", fontSize:"15px", display:"flex", justifyContent:"left"}}>
+      Hi there!👋I'm Stella the Bot.</div>,
+    
+
+    botAvatar:(props) =><MyAvatar {...props} />,
     
   }
 }
