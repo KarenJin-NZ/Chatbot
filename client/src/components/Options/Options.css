@@ -11,7 +11,6 @@
   border: 1px solid #2FA4FF;
   margin: 3px;
   color:#2FA4FF;
-  text-decoration: double;
 }
 
 .option-button:hover {
@@ -19,5 +18,4 @@
   background-color: #2FA4FF;
   transition: 0.3s;
   cursor: pointer;
-  
 }

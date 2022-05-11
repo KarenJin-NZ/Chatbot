@@ -1,12 +1,12 @@
 import React from "react";
 import "./Options.css";
 
-
 const Options = (props) => {
   const options = [
     {
       text:"Shipping",
-      handler: props.actionProvider.handleShipping,
+      //handler: props.actionProvider.handleShipping,
+      handler: props.actionProvider.handleShippingOptions,
       id:1,
     },
     { text: "Tracking", handler: () => {}, id: 2 },

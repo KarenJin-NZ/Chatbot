@@ -12,7 +12,15 @@ class MessageParser {
     }
 
     if(lowerCaseMessage.includes("shipping")){
-      this.actionProvider.handleShipping();
+      this.actionProvider.handleShippingOptions();
+    }
+
+    if(lowerCaseMessage.includes("rates")){
+      this.actionProvider.handleShippingRates();
+    }
+
+    if(lowerCaseMessage.includes("zones")){
+      this.actionProvider.handleShippingZones();
     }
 
   }
