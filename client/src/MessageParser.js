@@ -23,6 +23,10 @@ class MessageParser {
       this.actionProvider.handleShippingZones();
     }
 
+    if(lowerCaseMessage.includes("specials")){
+      this.actionProvider.handleSpecials();
+    }
+
   }
 }
 
