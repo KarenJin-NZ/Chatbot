@@ -29,6 +29,17 @@ class ActionProvider {
    this.updateChatbotState(message);
  }
 
+ handleSpecials = () => {
+  const message = this.createChatBotMessage (
+    "Fantastic, I have found specials in the following 5 categories. Which category would you like to know?",
+    {
+      widget:"specialsLinks",
+    }
+  );
+
+  this.updateChatbotState(message);
+}
+
  updateChatbotState(message) {
   this.setState(prevState => ({
     ...prevState, messages: [...prevState.messages, message]

@@ -34,6 +34,44 @@ const config = {
           }
         ]
       }
+    },
+    {
+      widgetName:"specialsLinks",
+      widgetFunc: (props) => <LinkList {...props} />,
+      props: {
+        options: [
+          {
+            text:"Books, Music & Movies",
+            url:
+            "https://www.thewarehouse.co.nz/c/specials/books-music-movies",
+            id: 1,
+          },
+          {
+            text:"Clothing, Shoes & Jewellery",
+            url:
+            "https://www.thewarehouse.co.nz/c/specials/clothing-shoes-jewellery",
+            id: 2,
+          },
+          {
+            text:"Electronics & Gaming",
+            url:
+            "https://www.thewarehouse.co.nz/c/specials/electronics-gaming",
+            id: 3,
+          },
+          {
+            text:"Health & Beauty",
+            url:
+            "https://www.thewarehouse.co.nz/c/specials/health-beauty",
+            id: 4,
+          },
+          {
+            text:"Food, Pets & Household",
+            url:
+            "https://www.thewarehouse.co.nz/c/specials/food-pets-household",
+            id: 5,
+          }
+        ]
+      }
     }
   ],
 
