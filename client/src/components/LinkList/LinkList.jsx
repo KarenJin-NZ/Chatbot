@@ -19,4 +19,3 @@ const LinkList = (props) => {
 };
 
 export default LinkList;
-

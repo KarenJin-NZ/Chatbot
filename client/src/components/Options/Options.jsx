@@ -4,15 +4,7 @@ import "./Options.css";
 const Options = (props) => {
   const options = [
     {
-      text:"Shipping",
-      handler: props.actionProvider.handleShippingOptions,
-      id:1,
-    },
-    { text: "Tracking", handler: () => {}, id: 2 },
-    { text: "Returns", handler: () => {}, id: 3 },
-    { text: "Specials", 
-      handler: props.actionProvider.handleSpecials, 
-      id: 4 },
+
   ];
 
   const optionsMarkup = options.map((option) => (
